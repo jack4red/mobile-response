@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/*
+rem
+ */
+html, body, p, h1, h2, h3, h4, h5, h6, table, tr, td, input, button, textarea, ul, ol, li, dl, dt, dd, div, img, form, p, iframe {
+  padding: 0;
+  margin: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 20px; }
+
+img, input, button {
+  border: none; }
+
+input, button {
+  -webkit-appearance: none;
+  outline: none; }
+
+em, strong {
+  font-style: normal; }
+
+li {
+  list-style: none; }
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  /*下为禁止苹果用户保存/复制图片*/
+  /*-webkit-touch-callout:none;*/ }
+
+button {
+  outline: none;
+  -webkit-appearance: none;
+  border: none; }
+
+strong {
+  font-weight: normal; }
+
+body a {
+  outline: none;
+  text-decoration: none;
+  color: #333;
+  -webkit-tap-highlight-color: transparent; }
+
+span, input, button, strong, em, div {
+  -webkit-tap-highlight-color: transparent; }
+
+html {
+  /* 禁止iphone文字缩放 */
+  -webkit-text-size-adjust: none;
+  font-size: 20px; }
+
+html {
+  height: 100%;
+  width: 100%;
+  /*color: #515151; */
+}
+
+body {
+   }
+
+.clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }

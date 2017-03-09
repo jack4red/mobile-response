@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="./style/reset.css"/>
+    <link rel="stylesheet" href="./style/main.css"/>
+    <title></title>
+</head>
+<body>
+
+</body>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/touch.min.js"></script>
+<script>
+    ;(function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+
+    })(document, window);
+
+
+        //横向拖拽
+        // var drag = (function () {
+
+        //     return function (single,target) {
+
+        //         var len = $(single).length;
+        //         var width = $(single).width();
+        //         var ulWidth = len*(0.625+7.3)*(20 * (docEl.clientWidth / 375));
+        //         var max = (ulWidth - $(window).width()+50);
+        //         $(target).css('width',ulWidth+'px');
+        //         var dx = 0;
+        //         touch.on(target, 'touchstart,touchmove', function(ev){
+        //             ev.preventDefault();
+        //             ev.stopPropagation();
+        //         });
+        //         touch.on(target, 'drag', function(ev){
+        //             ev.preventDefault();
+        //             ev.stopPropagation();
+        //             ev.cancelBubble = true;
+        //             var localX = dx + ev.x;
+        //             if(localX > 0){
+        //                 localX = 0;
+        //                 dx = 0;
+        //             }
+
+        //             if(localX < -max){
+        //                 localX = -max;
+        //                 dx =  -max;
+        //             }
+        //             $(target).css('webkitTransform',"translate3d("+localX+"px,0,0)");
+        //         });
+        //         touch.on(target, 'dragend', function(ev){
+        //             ev.preventDefault();
+        //             ev.stopPropagation();
+        //             dx+=ev.x
+        //         });
+        //     }
+
+        // })();
+</script>
+</html>
